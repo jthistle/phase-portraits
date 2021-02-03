@@ -15,10 +15,10 @@ def param_generator():
 
 
 def x_dot(x, y):
-    return x + y
+    return y + 0.5 * x
 
 def y_dot(x, y):
-    return y
+    return -x
 
 
 def main():
@@ -46,9 +46,9 @@ def main():
 
 def calculate_trajectory(init):
     points = []
-    LIMIT = 50000
+    LIMIT = 75000
     dt = 0.0001
-    count_every = 50
+    count_every = 75
 
     cur = list(init)
     for i in range(LIMIT):
